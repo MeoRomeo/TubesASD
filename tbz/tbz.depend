@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1525006975 source:c:\users\damar\downloads\from line\tubesran\baru\tbz\main.cpp
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	"tubes.h"
+
+1525007028 c:\users\damar\downloads\from line\tubesran\baru\tbz\tubes.h
+	<iostream>
+
+1525007021 source:c:\users\damar\downloads\from line\tubesran\baru\tbz\tubes.cpp
+	"tubes.h"
+	<iostream>
+	<string>
+
+1525006975 source:e:\tbz\main.cpp
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	"tubes.h"
+
+1525007028 e:\tbz\tubes.h
+	<iostream>
+
+1525007021 source:e:\tbz\tubes.cpp
+	"tubes.h"
+	<iostream>
+	<string>
+
