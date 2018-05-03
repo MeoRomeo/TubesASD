@@ -16,14 +16,14 @@ int main()
     while (exit == false)
     {
         system("cls");
-        cout<<"1. Insert Data Motor"<<endl;
-        cout<<"2. Insert Data Fitur"<<endl;
-        cout<<"3. Delete Data Motor"<<endl;
-        cout<<"4. Delete Data Fitur"<<endl;
-        cout<<"5. Lihat Data Keseluruhan"<<endl;
-        cout<<"6. Cari Data Motor"<<endl;
+        cout<<"1. Insert Data Motorcycle"<<endl;
+        cout<<"2. Insert Data Feature"<<endl;
+        cout<<"3. Delete Data Motorcycle"<<endl;
+        cout<<"4. Delete Data Feature"<<endl;
+        cout<<"5. View Data"<<endl;
+        cout<<"6. Find Motorcycle"<<endl;
         cout<<"7. Exit"<<endl;
-        cout<<"Masukkan Pilihan : ";
+        cout<<"Input Your Choice : ";
         cin>>pil;
         if (pil==1)
         {
@@ -47,22 +47,22 @@ int main()
         }
         else if (pil==6)
         {
-            cout<<"Masukkan Nama Motor : ";
+            cout<<"Input Motorcycle Name : ";
             cin>>x.nama;
             P = findElm(L,x);
             if (P==Nil)
             {
-                cout<<"Data Motor Tidak Ditemukan";
+                cout<<"Data Not Found";
             }
             else
             {
-                cout<<"Merk   : "<<info(P).merek<<endl;
-                cout<<"nama  : "<<info(P).nama<<endl;
-                cout<<"Tahun  : "<<info(P).tahun<<endl;
-                cout<<"Warna  : "<<info(P).warna<<endl;
+                cout<<"Brand   : "<<info(P).merek<<endl;
+                cout<<"Name  : "<<info(P).nama<<endl;
+                cout<<"Year  : "<<info(P).tahun<<endl;
+                cout<<"Color  : "<<info(P).warna<<endl;
                 cout<<"CC     : "<<info(P).cc<<endl;
-                cout<<"Harga  : "<<info(P).harga<<endl;
-                cout<<"Fitur  : "<<endl;
+                cout<<"Price  : "<<info(P).harga<<endl;
+                cout<<"Feature  : "<<endl;
                 printInfoFitur(Lfitur(P));
             }
         }
@@ -72,7 +72,7 @@ int main()
         }
         else
         {
-            cout<<"Pilihan Salah";
+            cout<<"Wrong Choice";
         }
         getch();
     }

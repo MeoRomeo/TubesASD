@@ -161,17 +161,17 @@ void insertMotor(listmotor &L)
     int pil;
     infomotor x;
     address P,Q;
-    cout<<"Masukkan Merek      : ";
+    cout<<"Input Brand      : ";
     cin>>x.merek;
-    cout<<"Masukkan Nama Motor : ";
+    cout<<"Input Motorcycle Name : ";
     cin>>x.nama;
-    cout<<"Masukkan Warna      : ";
+    cout<<"Input Color      : ";
     cin>>x.warna;
-    cout<<"Masukkan Tahun      : ";
+    cout<<"Input Producing Years : ";
     cin>>x.tahun;
-    cout<<"Masukkan CC         : ";
+    cout<<"Input CC         : ";
     cin>>x.cc;
-    cout<<"Masukkan Harga      : ";
+    cout<<"Input Price      : ";
     cin>>x.harga;
     P = alokasi(x);
     cout<<endl<<"1. Insert First"<<endl;
@@ -188,12 +188,12 @@ void insertMotor(listmotor &L)
     }
     else if (pil==3)
     {
-        cout<<"Masukkan Nama Motor : ";
+        cout<<"Input Motorcycle Name : ";
         cin>>x.nama;
         Q = findElm(L,x);
         if (Q==Nil)
         {
-            cout<<"Motor Tidak Ditemukan";
+            cout<<"Motorcycle Not Found";
         }
         else
         {
@@ -263,18 +263,18 @@ void insertFitur(listmotor &L)
     addressF Q,F;
     infomotor x;
     infofitur y;
-    cout<<"Masukkan Nama Motor : ";
+    cout<<"Input Motorcycle Name : ";
     cin>>x.nama;
     P = findElm(L,x);
     if ( P == Nil )
     {
-        cout<<"Motor Tidak Ditemukan";
+        cout<<"Motorcycle Not Found";
     }
     else
     {
-        cout<<"Masukkan Nama Fitur : ";
+        cout<<"Input Feature Name : ";
         cin>>y.namafitur;
-        cout<<"Masukkan Keterangan : ";
+        cout<<"Description : ";
         cin>>y.keterangan;
         Q = alokasiFitur(y);
         cout<<endl<<"1. Insert First"<<endl;
@@ -291,12 +291,12 @@ void insertFitur(listmotor &L)
         }
         else if (pil==3)
         {
-            cout<<"Masukkan Nama fitur : ";
+            cout<<"Input Feature Name : ";
             cin>>y.namafitur;
             F = findElmFitur(Lfitur(P),y);
             if (F==Nil)
             {
-                cout<<"Fitur Tidak Ditemukan";
+                cout<<"Feature Not Found";
             }
             else
             {
@@ -310,7 +310,7 @@ void deleteFirst(listmotor &L, address &P)
 {
     if ( first(L) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List"<<endl;
     }
     else if ( prev(first(L)) == first(L) )
     {
@@ -336,7 +336,7 @@ void deleteLast(listmotor &L, address &P)
 {
     if ( first(L) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List"<<endl;
     }
     else if ( first(L) == next(P) )
     {
@@ -362,7 +362,7 @@ void deleteAfter(listmotor &L, address Prec, address &P)
 {
     if ( first(L) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List"<<endl;
     }
     else if ( next(Prec) == first(L) )
     {
@@ -383,12 +383,12 @@ void deleteMotor(listmotor &L)
 {
     address P,Q;
     infomotor x;
-    cout<<"Masukkan Nama Motor yang Akan Dihapus : ";
+    cout<<"Input Motorcycle Name :";
     cin>>x.nama;
     P = findElm(L,x);
     if ( P == Nil )
     {
-        cout<<"Motor Tidak Ditemukan";
+        cout<<"Motorcycle Not Found";
     }
     else
     {
@@ -401,7 +401,7 @@ void deleteFirstFitur(listfitur &Lfitur, addressF &P)
 {
     if ( first(Lfitur) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List<<endl;
     }
     else if ( first(Lfitur) == last(Lfitur) )
     {
@@ -425,7 +425,7 @@ void deleteLastFitur(listfitur &Lfitur, addressF &P)
 {
     if ( first(Lfitur) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List"<<endl;
     }
     else
     {
@@ -442,7 +442,7 @@ void deleteAfterFitur(listfitur &Lfitur, addressF Prec, addressF &P)
 {
     if ( first(Lfitur) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List"<<endl;
     }
     else if ( next(Prec) == first(Lfitur) )
     {
@@ -465,21 +465,21 @@ void deleteFitur(listmotor &L)
     addressF Q,R;
     infomotor x;
     infofitur y;
-    cout<<"Masukkan Nama Mobil : ";
+    cout<<"Input Motorcycle Name : " ;
     cin>>x.nama;
     P = findElm(L,x);
     if ( P == Nil )
     {
-        cout<<"Mobil Tidak Ditemukan";
+        cout<<"Motorcycle Not Found";
     }
     else
     {
-        cout<<"Masukkan Nama Fitur : ";
+        cout<<"Input Feature Name : ";
         cin>>y.namafitur;
         Q = findElmFitur(Lfitur(P),y);
         if ( Q == Nil )
         {
-            cout<<"Fitur Tidak Ditemukan";
+            cout<<"Feature Not Found";
         }
         else
         {
@@ -492,20 +492,20 @@ void printInfo(listmotor L)
 {
     if ( first(L) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List"<<endl;
     }
     else
     {
         address P = first(L);
         do
         {
-            cout<<"Merk   : "<<info(P).merek<<endl;
-            cout<<"nama  : "<<info(P).nama<<endl;
-            cout<<"Tahun  : "<<info(P).tahun<<endl;
-            cout<<"Warna  : "<<info(P).warna<<endl;
-            cout<<"CC     : "<<info(P).cc<<endl;
-            cout<<"Harga  : "<<info(P).harga<<endl;
-            cout<<"Fitur  : "<<endl;
+            cout<<"Brand            : "<<info(P).merek<<endl;
+            cout<<"Name             : "<<info(P).nama<<endl;
+            cout<<"Producing Years  : "<<info(P).tahun<<endl;
+            cout<<"Color            : "<<info(P).warna<<endl;
+            cout<<"CC               : "<<info(P).cc<<endl;
+            cout<<"Price            : "<<info(P).harga<<endl;
+            cout<<"Feature          : "<<endl;
             printInfoFitur(Lfitur(P));
             P = next(P);
         } while ( P != first(L) );
@@ -516,7 +516,7 @@ void printInfoFitur(listfitur Lfitur)
 {
     if ( first(Lfitur) == Nil )
     {
-        cout<<"List Kosong"<<endl;
+        cout<<"Empty List"<<endl;
     }
     else
     {
@@ -525,7 +525,7 @@ void printInfoFitur(listfitur Lfitur)
         do
         {
             cout<<a<<". "<<info(P).namafitur<<endl;
-            cout<<"Keterangan : "<<info(P).keterangan<<endl;
+            cout<<"Description : "<<info(P).keterangan<<endl;
             a++;
             P = next(P);
         } while ( P != Nil );
